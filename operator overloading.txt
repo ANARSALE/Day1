@@ -1,0 +1,73 @@
+using System;
+
+public class mul
+{
+   public int num1,num2;
+	public  mul(int num1,int num2)
+	{
+		this.num1=num1;
+		this.num2=num2;
+	}
+	public static mul operator*(mul s1,mul s2)
+	{
+		mul s3=new mul(0,0);
+		s3.num1=s1.num1*s2.num1;
+		s3.num2=s1.num2*s2.num2;
+		return s3;
+	}
+}
+		public class Program
+		{
+	public static void Main()
+	{
+		mul s1=new mul(7,8);
+		mul s2=new mul(2,6);
+		mul s3=new mul(0,0);
+		s3=s1*s2;
+		Console.WriteLine("values after multi num 1: "+s3.num1+" || num 2: "+s3.num2);
+	}	
+		}
+		
+		
+		
+		
+		
+		
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Day_3
+{
+    public class Class8
+    {
+        public static void Main()
+        {
+            Mul m1 = new Mul(1,2);
+            Mul m2 = new Mul(3,2);
+            Mul m3 = new Mul(1, 1);
+            Console.WriteLine("values before multiplication  Number_1: "+m3.number1+"    Number_2: "+m3.number2);
+            m3 = m1 * m2;
+            Console.WriteLine("values after mul number 1:  "+m3.number1+"    Number 2: "+m3.number2);
+            Console.ReadLine();
+        }
+    }
+   public class Mul
+    {
+        public int number1, number2;
+        public Mul(int number1, int number2)
+        {
+            this.number1 = number1;
+            this.number2 = number2;
+        }
+        public static Mul operator *(Mul m1, Mul m2)
+        {
+            Mul m3 = new Mul(1,1);
+            m3.number1 = m1.number1 * m2.number1;
+            m3.number2 = m1.number2 * m2.number2;
+            return m3;
+        }
+    }
+}
